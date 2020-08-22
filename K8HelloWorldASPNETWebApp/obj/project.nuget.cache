@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZTgZwJqMywMcy028AlhlM7CQjOcFwL8k/Dlq3bpswTNPofIgYutkCFWKnYHg6btr8du4JzU7ES7PO58srTTvHA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\shein\\Source\\Repos\\KubernetesHelloWorldASPNET\\K8HelloWorldASPNETWebApp\\KubernetesHelloWorldASPNET.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shein\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "C:\\Users\\shein\\.nuget\\packages\\microsoft.visualstudio.azure.kubernetes.tools.targets\\1.1.0\\microsoft.visualstudio.azure.kubernetes.tools.targets.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
