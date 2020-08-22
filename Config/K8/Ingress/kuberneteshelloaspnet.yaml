@@ -1,0 +1,42 @@
+# 
+# Begin commands to execute this file using kubectl with bash
+# kubectl apply -f kuberneteshelloaspnet.yaml --namespace ingress-basic
+# End commands to execute this file using kubectl with bash
+# 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuberneteshelloaspnet  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kuberneteshelloaspnet
+  template:
+    metadata:
+      labels:
+        app: kuberneteshelloaspnet
+        app-type: ingress-demo
+    spec:
+      containers:
+      - name: kuberneteshelloaspnet
+        image: siegfried01/kuberneteshelloworldaspnet
+        ports:
+        - containerPort: 80
+        env:
+        - name: TITLE
+          value: "Welcome to Azure Kubernetes Service (AKS)"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kuberneteshelloaspnet  
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: kuberneteshelloaspnet
+    app-type: ingress-demo
+    tier: test
+
