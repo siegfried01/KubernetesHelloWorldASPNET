@@ -1,6 +1,30 @@
 # 
 # Begin commands to execute this file using kubectl with bash
-# kubectl apply -f ${WINOOP_EG}/kubernetes/ingress-basic/hello-world-ingress.yaml
+# kubectl delete namespace ingress-basic
+# echo kubectl create namespace ingress-basic # microsoft ingress example
+# kubectl create namespace ingress-basic # microsoft ingress example
+# helm repo add stable https://kubernetes-charts.storage.googleapis.com/ 
+# helm install nginx-ingress stable/nginx-ingress \
+#     --namespace ingress-basic \
+#     --set controller.replicaCount=2 \
+#     --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux \
+#     --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux 
+# echo kubectl get service -l app=nginx-ingress --namespace ingress-basic 
+# kubectl get service -l app=nginx-ingress --namespace ingress-basic 
+# kubectl run redis --image=bitnami/redis:latest --replicas=1 --port=6379 --labels="ver=1,app=todo,env=proto,tier=back" --env="REDIS_PASSWORD=secretpassword" --env="REDIS_REPLICATION_MODE=master" --env="REDIS_MASTER_PASSWORD=secretpassword" -n ingress-basic
+# echo kubectl expose deployment -n ingress-basic  redis
+# kubectl expose deployment -n ingress-basic  redis
+# kubectl apply -f ${SRCROOT}/KubernetesHelloWorldASPNET/Config/K8/Ingress/aks-helloworld-one.yaml --namespace ingress-basic
+# kubectl apply -f ${SRCROOT}/KubernetesHelloWorldASPNET/Config/K8/Ingress/aks-helloworld-two.yaml --namespace ingress-basic
+# kubectl apply -f ${SRCROOT}/KubernetesHelloWorldASPNET/Config/K8/Ingress/todolistclient.yaml --namespace ingress-basic
+# kubectl apply -f ${SRCROOT}/KubernetesHelloWorldASPNET/Config/K8/Ingress/kuberneteshelloaspnet.yaml --namespace ingress-basic
+# kubectl apply -f ${SRCROOT}/KubernetesHelloWorldASPNET/Config/K8/Ingress/hello-world-ingress.yaml
+# for i in {1..115}
+# do
+#    echo "Welcome $i times"
+#    kubectl get pods -o wide -n ingress-basic
+#    sleep 3
+# done
 # End commands to execute this file using kubectl with bash
 # 
 

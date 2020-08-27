@@ -21,7 +21,7 @@ namespace KubernetesHelloWorldASPNET
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.ConfigureKestrel(serverOptions => { serverOptions.Listen(System.Net.IPAddress.Loopback, 80); });
+                    webBuilder.ConfigureKestrel(serverOptions => { serverOptions.Listen(System.Net.IPAddress.Any, 80); });
                 });
     }
 }
