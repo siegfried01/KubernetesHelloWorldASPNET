@@ -1,5 +1,6 @@
 # 
 # Begin commands to execute this file using kubectl with bash
+# kubectl delete services,deployments,pods,jobs -l tier=front -n ingress-basic
 # kubectl apply -f todolistclient.yaml --namespace ingress-basic
 # for i in {1..115}
 # do
@@ -46,5 +47,5 @@ spec:
   selector:
     app: todolistclient
     app-type: ingress-demo
-    tier: test
+    tier: front
 
